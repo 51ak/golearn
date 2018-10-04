@@ -2,7 +2,6 @@ package day1
 
 import (
 	"code.google.com/p/go-tour/wc"
-	"fmt"
 	"strings"
 )
 
@@ -17,6 +16,6 @@ func WordCount(s string) map[string]int {
 }
 
 func Test01() {
-	fmt.Println("WordCount")
+
 	wc.Test(WordCount)
 }
