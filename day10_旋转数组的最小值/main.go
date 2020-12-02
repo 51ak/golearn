@@ -14,9 +14,9 @@ var errori int = 1
 func findMin(nums []int) int {
 	lens := len(nums)
 
-	if lens == 0 {
-		return -1
-	}
+	// if lens == 0 {
+	// 	return -1
+	// }
 	if lens < 5 {
 		tempi := nums[0]
 		for _, i := range nums {
