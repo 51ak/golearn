@@ -6,12 +6,30 @@ import (
 	"time"
 )
 
-var errori int = 1
-
 /*
-198. House Robber
+213. House Robber II
 */
 func rob(nums []int) int {
+	lens := len(nums)
+	if lens == 0 {
+		return 0
+	} else if lens == 1 {
+		return nums[0]
+	} else if lens == 2 {
+		return MaxInt(nums[0], nums[1])
+	}
+	// else if lens == 3 {
+	// 	return nums[1]
+	// }
+	fmt.Printf("num=%v,lennum=%v,snum=%v,slennum=%v ---------------\n", nums, lens, nums[0:lens-1], len(nums[0:lens-1]))
+	s1 := rob_sig(nums[0 : lens-1])
+	// fmt.Printf("s1:=")
+	// fmt.Println(nums[0 : lens-2])
+	s2 := rob_sig(nums[1:lens])
+	return MaxInt(s1, s2)
+}
+
+func rob_sig(nums []int) int {
 	lens := len(nums)
 	if lens == 0 {
 		return 0
@@ -66,15 +84,12 @@ func main() {
 	for _, n := range a {
 
 		nums := maketest(0, 400, 0, n)
-		resutl := rob(nums)
-		fmt.Printf("nums:%v,resutl:%v \n", nums, resutl)
+		fmt.Printf("nums:%v,lennums:%v,resutl:%v ,%v\n", nums, len(nums), rob(nums), rob_sig(nums))
 		//fmt.Println(nums)
 
 		//fmt.Printf("n:%v,errori:%v,result:%v\n", n, changei, firstBadVersion(n))
 	}
 
 	nums := []int{4, 3, 5, 4, 5, 23, 7, 8, 9, 7, 7, 8, 12, 15, 17, 13, 4, 9, 12, 17, 13, 5, 0, 7, 14, 7, 9, 8, 9, 30}
-	fmt.Println(len(nums))
-	resutl := rob(nums)
-	fmt.Println(resutl)
+	fmt.Println(rob(nums))
 }
