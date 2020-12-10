@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/51ak/golearn/day2"
 )
 
 func main() {
@@ -22,6 +21,7 @@ func main() {
 			fmt.Println("errtest")
 		day2.Test06()
 	*/
-	fmt.Println("readtest")
-	day2.Test07()
+	// test_changebox()
+	fmt.Printf("test")
+	// day2.Test07()
 }

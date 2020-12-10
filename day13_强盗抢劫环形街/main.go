@@ -21,10 +21,8 @@ func rob(nums []int) int {
 	// else if lens == 3 {
 	// 	return nums[1]
 	// }
-	fmt.Printf("num=%v,lennum=%v,snum=%v,slennum=%v ---------------\n", nums, lens, nums[0:lens-1], len(nums[0:lens-1]))
+	//fmt.Printf("num=%v,lennum=%v,snum=%v,slennum=%v ---------------\n", nums, lens, nums[0:lens-1], len(nums[0:lens-1]))
 	s1 := rob_sig(nums[0 : lens-1])
-	// fmt.Printf("s1:=")
-	// fmt.Println(nums[0 : lens-2])
 	s2 := rob_sig(nums[1:lens])
 	return MaxInt(s1, s2)
 }
