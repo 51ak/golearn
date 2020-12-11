@@ -28,7 +28,7 @@ func main() {
 	rand.Seed(time.Now().Unix())
 	//var a []int = []int{1, 2, 3, 4, 9, 11, 22, 1001, 9999, 9999999}
 
-	var a []int = []int{1, 2, 3, 4, 9, 11, 22, 5932768, 1001, 9999, 9999999, 777777}
+	var a []int = []int{1, 2, 3, 4, 9, 11, 22, 30, 1001, 9999, 9999999, 777777}
 	for _, n := range a {
 		result := climbStairs(n)
 		fmt.Printf("%v-->%v\n", n, result)
