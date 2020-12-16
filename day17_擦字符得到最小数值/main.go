@@ -66,12 +66,12 @@ func removeKdigits2(num string, k int) string {
 }
 
 func main() {
-	nums := []string{"14325709", "10200", "13145203344910837726325978"}
+	nums := []string{"14325709", "10200", "310837726325978"}
 	lens := len(nums)
 	for i := 0; i < lens; i++ {
 		for j := 0; j < len(nums[i]); j++ {
 			reult := removeKdigits(nums[i], j)
-			fmt.Printf("%v擦除%v次，最小结果%v-->%v\n", nums[i], j, reult, removeKdigits2(nums[i], j))
+			fmt.Printf("   - %v擦除%v次，最小结果%v\n", nums[i], j, reult)
 		}
 	}
 
