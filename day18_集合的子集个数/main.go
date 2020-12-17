@@ -2,10 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
-
-var errori int = 1
 
 /*
 78. Subsets
@@ -42,7 +39,8 @@ func subsetsLoop(resultlens int, nums []int, reuslti []int, ci int) {
 func main() {
 	nums := []int{1, 2, 3, 4, 5}
 	resutl := subsets(nums)
-	resa := fmt.Sprintf("%v", resutl)
-	resa = strings.Replace(strings.Replace(strings.Replace(strings.Replace(strings.Replace(strings.Replace(resa, "1", "飞", -1), "2", "羽", -1), "3", "云", -1), "4", "超", -1), "5", "忠", -1), "[]", "", -1)
-	fmt.Printf("%v种排法:%v\n", len(resutl)-1, resa)
+	// resa := fmt.Sprintf("%v", resutl)
+	// resa = strings.Replace(strings.Replace(strings.Replace(strings.Replace(strings.Replace(strings.Replace(resa, "1", "飞", -1), "2", "羽", -1), "3", "云", -1), "4", "超", -1), "5", "忠", -1), "[]", "", -1)
+	// fmt.Printf("%v种排法:%v\n", len(resutl)-1, resa)
+	fmt.Println(resutl)
 }
