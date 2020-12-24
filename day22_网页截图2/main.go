@@ -58,9 +58,9 @@ func GetScreenShot(url string, filename string, width int, height int) bool {
 func main() {
 	/*
 		#build on mac
-		CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o  dboopScreenLinux  main.go
-		CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build  -o  dboopScreenWin.exe  main.go
-		CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o  dboopScreenMac  main.go
+		CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o  dboopScreenPmLinux  main.go
+		CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build  -o  dboopScreenPmWin.exe  main.go
+		CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o  dboopScreenPmMac  main.go
 
 
 		cp dboopScreen*  /Users/kouko/Desktop/Qdesk/share/dbooptool
@@ -69,7 +69,7 @@ func main() {
 		git commit -m "dboopscreen"
 		git push
 
-		cd  /Users/kouko/go/src/github.com/51ak/golearn/day21_网页截图
+		cd  /Users/kouko/go/src/github.com/51ak/golearn/
 	*/
 	var url string
 	var filename string
